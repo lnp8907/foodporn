@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>我是誰?</title>
+	<style type="text/css">
+		img,
+		td {
+			width: 150px;
+			height: 150px;
+		}
+
+		td {
+			background-size: cover;
+		}
+
+		#all {
+			width: 600px;
+			height: auto;
+			margin: 10px auto;
+		}
+
+		#btn {
+			width: 150px;
+			height: 50px;
+			margin: 10px auto 0;
+			display: block;
+			font-size: 2em;
+			font-family: '微軟正黑體';
+		}
+
+		#ans {
+			text-align: center;
+			font-size: 4em;
+			font-family: '微軟正黑體';
+			color: deeppink;
+		}
+
+		#none {
+			width: 300px;
+			height: 300px;
+			background-image: url(images/13.jpg);
+			background-size: cover;
+		}
+
+		#t13 {
+			display: block;
+			margin: 20px auto;
+			width: 200px;
+			height: 200px;
+		}
+
+		#ans {
+			text-align: center;
+			color: deeppink;
+			margin: 0 auto;
+			font-family: "微軟正黑體";
+			font-size: 2em;
+			font-weight: 800;
+			letter-spacing: 0.5em;
+		}
+	</style>
+</head>
+
+<body>
+	<span id="voice"><audio src="" id="v1" hidden="true" volume="10"></audio></span>
+	<audio src="voice/start.m4a" id="v2" hidden="true"></audio>
+	<audio src="voice/end.m4a" id="v3" hidden="true"></audio>
+	<div id="all">
+		<table border="1" cellspacing="0" align="center">
+			<tr>
+				<td id="t1"><img name="侯乃蓉" id="p1" src="" alt=""></td>
+				<td id="t2"><img name="張翠珍" id="p2" src="" alt=""></td>
+				<td id="t3"><img name="吳駿宏" id="p3" src="" alt=""></td>
+				<td id="t4"><img name="汪廷憲" id="p4" src="" alt=""></td>
+			</tr>
+			<tr>
+				<td id="t12"><img name="邱琳倫" id="p12" src="" alt=""></td>
+				<td id="none" colspan="2" rowspan="2"><img src="" alt="" id="t13">
+					<p id="ans"></p>
+				</td>
+				<td id="t5"><img name="簡俐玲" id="p5" src="" alt=""></td>
+			</tr>
+			<tr>
+				<td id="t11"><img name="呂岳融" id="p11" src="" alt=""></td>
+				<td id="t6"><img name="許嘉宏" id="p6" src="" alt=""></td>
+			</tr>
+			<tr>
+				<td id="t10"><img name="8+9" id="p10" src="" alt=""></td>
+				<td id="t9"><img name="何建興" id="p9" src="" alt=""></td>
+				<td id="t8"><img name="吳冠宏" id="p8" src="" alt=""></td>
+				<td id="t7"><img name="陳宗佑" id="p7" src="" alt=""></td>
+			</tr>
+		</table>
+		<input type="button" id="btn" value="我是誰">
+		<a href="index.html" id="gotohomepage"><input type="button" value="回首頁"></a>
+		<script type="text/javascript">
+			var runTimes;  /*隨機總次數*/
+			var count = 0; /*計次*/
+			var i = 1;  /*ID變數*/
+			var btn = document.getElementById("btn");
+			btn.addEventListener('click',
+				function run() {	 /*初始化設定*/
+					document.getElementById("none").innerHTML = "<img src='' alt='' id='t13'>";
+					document.getElementById("none").style.backgroundImage = "url(images/13.jpg)";
+					runTimes = Math.floor((Math.random() * 36 + 36));
+					start();
+				},
+				false);
+
+			/*音效播放*/
+			btn.addEventListener('click',
+				function () { document.getElementById('v2').play() },
+				false);
+
+			function start() { /*開始跑回圈*/
+				var speed = Math.floor((Math.random() * 250 + 50));
+				if (i == 1) {
+					document.getElementById("t" + i).style.backgroundImage = "url(image/picture/" + i + ".jpg)";
+					document.getElementById("t12").style.backgroundImage = "";
+				}
+				else {
+					document.getElementById("t" + i).style.backgroundImage = "url(image/picture/" + i + ".jpg)";
+					document.getElementById("t" + i).style.backgroundSize = "cover";
+					document.getElementById("t" + (i - 1)).style.backgroundImage = "";
+				}
+				count++;
+				if (count != runTimes) {
+					i = i == 12 ? 0 : i;
+					i++;
+					setTimeout(start, speed);
+				} else {
+					document.getElementById("none").style.backgroundImage = "url(image/picture/14.jpg)";
+					document.getElementById("none").style.backgroundSize = "cover";
+					document.getElementById("none").innerHTML = "<img src='image/picture/" + i + ".jpg' alt='' id='t13'>" +
+						"<p id='ans'>" + document.getElementById("p" + i).name + "</p>";
+					document.getElementById("voice").innerHTML = "<audio src='voice/v" + i + ".mp3' id='v1' hidden='true'></audio>";
+					document.getElementById('v3').play();
+					setTimeout(function () { document.getElementById('v1').play() }, 2000);
+					count = 0;
+				}
+			}
+		</script>
+</body>
+
+</html>
