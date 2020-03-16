@@ -260,7 +260,7 @@
 
 <body>
     <header>
-        <div id="top-logo" class="logo"><a href="whoAmI.html" title="我是誰"><img class="logo-photo"
+        <div id="top-logo" class="logo"><a href="frontEnd.html" title="回首頁"><img class="logo-photo"
                     src="image/FoodPron_Logo.png" alt="logo"></a></div>
         <div class="function">
             <div class="function-list">
@@ -410,9 +410,8 @@
         </div>
     </div><!-- end of login-->
     <div class="pagetop">
-        <a href="#top-logo"><img src="image/go-top-page.png" alt="go-top-page"></a>
+        <img src="image/go-top-page.png" alt="BackTop" id="BackTop">
         <!--一鍵置頂-->
-
     </div><!-- end of pagetop-->
     <main>
         <article>
@@ -576,6 +575,20 @@
     <script src="javascript/header_sider.js" type="text/javascript" charset="utf-8"></script>
     <!-- JavasScript for LogForm -->
     <script src="javascript/loginForm.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- JavasScript for BackTop -->
+    <script>
+        $('#BackTop').click(function () {
+            $('html,body').animate({ scrollTop: 0 }, 333);
+        });
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('#BackTop').fadeIn(222);
+            } else {
+                $('#BackTop').stop().fadeOut(222);
+            }
+        })
+    </script>
 </body>
 
 </html>
