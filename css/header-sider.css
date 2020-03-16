@@ -33,35 +33,35 @@
         }
 
 .slide:nth-of-type(1) {
-    background-image: url("../image/ad/DA106-G4 PROJECT FOODPORN.png");
+    background-image: url("../image/ad/DA106-G4 PROJECT FOODPORN.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
 }
 
 .slide:nth-of-type(2) {
-    background-image: url("../image/ad/INameTheSite.png");
+    background-image: url("../image/ad/INameTheSite.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
 }
 
 .slide:nth-of-type(3) {
-    background-image: url("../image/ad/simple\ is\ best!.png");
+    background-image: url("../image/ad/simple\ is\ best!.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
 }
 
 .slide:nth-of-type(4) {
-    background-image: url("../image/ad/TheVagetable.png");
+    background-image: url("../image/ad/TheVagetable.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
 }
 
 .slide:nth-of-type(5) {
-    background-image: url("../image/ad/EnjoyYourLivestream.png");
+    background-image: url("../image/ad/EnjoyYourLivestream.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
