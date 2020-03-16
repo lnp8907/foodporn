@@ -278,7 +278,7 @@ nav {
     background: transparent;
     background-image: url("../image/button-bg-fill-darkpink.png");
     background-repeat: repeat-x;
-    background-position: 0 -30%;
+    background-position: 0 -35%;
     transition: 1.2s ease;
     background-color: white;
 }
