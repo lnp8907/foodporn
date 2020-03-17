@@ -25,6 +25,7 @@ nav ul {
 .access-menu {
     display: table;
     /* margin: 1em auto; */
+    
 }
 
 .access-menu>li {
@@ -56,6 +57,7 @@ nav ul {
     -ms-transition: all .2s linear;
     -o-transition: all .2s linear;
     transition: all .2s linear;
+    
 }
 
 /* .access-menu a:hover,
@@ -90,7 +92,7 @@ nav ul {
     left: -9999px;
     position: absolute;
     top: -9999px;
-    width: 100%;
+    max-width: 100%;
     z-index: 999;
 }
 
@@ -121,7 +123,7 @@ nav ul {
 .access-menu-span {
     position: relative;
     bottom: 18px;
-    width: 90px;
+    max-width: 90px;
 }
 
 /* .access-menu-subinner {
@@ -144,7 +146,7 @@ nav ul {
 } */
 
 .access-menu-icon {
-    width: 60px;
+    max-width: 60px;
 }
 
 .logo-photo {
@@ -156,7 +158,7 @@ nav ul {
 }
 
 .header-icon {
-    width: 40px;
+    max-width: 40px;
 
 }
 
@@ -246,10 +248,17 @@ nav {
 
 
  /*---------------按鈕特效起-------------------------*/
+ @media (max-width: 768px){
+    .article-section-seemore{
+        max-width: 180px;
+    }
+  }
+
  .article-section-seemore {
     text-align: center;
     display: inline-block;
     width: 370px;
+    
     height: 45px;
     letter-spacing: 3px;
     flex: 1;
