@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0">
     <title>Foodporn</title>
     <link rel="stylesheet" href="css/frontEnd.css">
     <link rel="stylesheet" href="css/header-sider.css">
@@ -31,7 +31,7 @@
 
         .article-section-description {
             /* border: 5px solid black; */
-            width: 1100px;
+            max-width: 1024px;
             margin: 10px auto;
             height: 600px;
 
@@ -39,17 +39,18 @@
 
         /*-----------------------------廚房專區----------------------------*/
         #article-recipe {
-            height: 500px;
+            height: 530px;
             margin-top: 210px;
             background-image: url("image/ad/recipeBG.png");
             background-repeat: no-repeat;
             background-size: cover;
-            background-size: 100%;
+            background-position: center;
         }
 
         .ariticle-section-racipe-h2 {
             position: relative;
             top: -90px;
+
         }
 
         .ariticle-section-racipe-h2+span {
@@ -63,6 +64,7 @@
         }
 
         #article-section-description-recipe {
+            margin: auto;
             height: 400px;
         }
 
@@ -71,13 +73,15 @@
             height: 100%;
             float: left;
             padding-top: 90px;
+
         }
 
-        .article-section-description-recipe-left span {
+        .article-section-description-recipe-left-span {
             color: white;
             font-size: 28px;
-            position: relative;
-            top: 15px;
+            display: block;
+
+            padding-top: 10px;
         }
 
         .article-section-description-recipe-left img {
@@ -92,6 +96,7 @@
             padding: 5px;
             background-color: white;
             margin-bottom: 10px;
+            margin-top: 10px;
         }
 
         .article-recipe-right-photo-div {
@@ -101,7 +106,6 @@
 
         .article-recipe-right-title {
             float: left;
-            display: inline-block;
             width: 50%;
         }
 
@@ -111,6 +115,7 @@
             font-size: 18px;
             text-align: left;
             width: 200px;
+
         }
 
         .article-recipe-right-title h3 {
@@ -122,7 +127,6 @@
             display: inline-block;
             color: black;
             border-top: 1px solid #E4002B;
-            margin-top: 5px;
             padding-top: 5px;
         }
 
@@ -145,9 +149,7 @@
         }
 
         #article-section-seemore-recipe {
-            position: relative;
-            left: -250px;
-            bottom: 170px;
+            margin-top: 50px;
             clear: both;
 
         }
@@ -161,7 +163,7 @@
 
         #article-container-livestream {
             margin: 0 auto;
-            width: 1100px;
+            max-width: 1024px;
         }
 
         .article-section-description-livestream {
@@ -170,36 +172,27 @@
         }
 
         .article-section-description-livestream-left {
-            padding-top: 40px;
             height: 600px;
             width: 50%;
             float: left;
+            padding-top: 75px;
         }
 
         .article-section-description-livestream-right {
-            /* border: 2px solid black; */
             padding: 20px 10px 0 10px;
-            height: 30px;
             width: 24%;
             display: inline-block;
             text-align: left;
         }
 
-        .livestream-left-1-video-container {
-            display: block;
+        .livestream-left-1-video-container iframe {
             width: 95%;
-            margin-top: 50px;
-            height: 70%;
-        }
-
-        .livestream-left-1-video-container video {
-            width: 100%;
-
+            height: 270px;
+            margin-bottom: 5px;
         }
 
         .livestream-left-1-video-title {
-            position: relative;
-            top: -70px;
+            padding-left: 10px;
             text-align: left;
             height: 30%;
         }
@@ -211,20 +204,22 @@
         }
 
         .livestream-left-1-video-title p {
-            width: 95%;
+            width: 100%;
             color: black;
             text-align: left;
             font-size: 18px;
             margin-top: 10px;
+
         }
 
         .livestream-right-photo-div {
             overflow: hidden;
+            height: 150px;
         }
 
         .article-section-description-livestream-right img {
             width: 100%;
-            height: 200px;
+            height: auto;
             transition: all ease-in-out 400ms;
             transform: scale(1, 1);
             overflow: hidden;
@@ -239,9 +234,10 @@
         .livestream-right-title h3 {
             font-weight: 400;
             font-size: 18px;
-            /* letter-spacing: 1px; */
             border-bottom: 1px solid #E4002B;
             display: inline-block;
+            margin-top: 5px;
+            clear: both;
         }
 
         .livestream-right-title p {
@@ -249,7 +245,7 @@
             text-align: left;
             font-size: 18px;
             margin-top: 5px;
-
+            max-width: 100%;
         }
 
         /*---------------------------食材商城------------------------------------*/
@@ -260,28 +256,30 @@
 
 <body>
     <header>
-        <div id="top-logo" class="logo"><a href="whoAmI.html" title="我是誰"><img class="logo-photo"
+        <div id="top-logo" class="logo"><a href="frontEnd.html" title="回首頁"><img class="logo-photo"
                     src="image/FoodPron_Logo.png" alt="logo"></a></div>
         <div class="function">
             <div class="function-list">
+                <a href="#"></a>
                 <div class="member-center">
-                    <a href="#"><span class="member-center-spann">會員中心</span></a>
-                </div>
+                    <span class="member-center-spann">會員中心</span>
+                </div></a>
             </div>
             <div class="function-list">
+                <div class="login">
+                    <div class="function-list">
+                        <a href="#"><img class="header-icon" src="image/user-icon.png" alt="login-icon">
+                            <div class="herder-icon-span"><span class="login-span">登入</span></div>
+                        </a>
+                    </div>
+                </div>
                 <div class="shop-car">
                     <a href="#"><img class="header-icon" src="image/shopping-cart-icon.png" alt="shopping-cart">
                         <div class="herder-icon-span"><span class="shop-car-span">購物車</span></div>
                     </a>
                 </div>
             </div>
-            <div class="login">
-                <div class="function-list">
-                    <a href="#"><img class="header-icon" src="image/user-icon.png" alt="login-icon">
-                        <div class="herder-icon-span"><span class="login-span">登入</span></div>
-                    </a>
-                </div>
-            </div>
+
         </div><!-- end of function-->
         <nav role="navigation">
             <ul class="access-menu">
@@ -428,7 +426,7 @@
                             </div>
                             <div class="slide" style="cursor :pointer;" onclick="window.location.href='#';">
                             </div>
-                            <div class="slide" style="cursor :pointer;" onclick="window.location.href='#';">"
+                            <div class="slide" style="cursor :pointer;" onclick="window.location.href='#';">
                             </div>
                         </div>
                     </div>
@@ -444,8 +442,10 @@
                     <div class="article-section-description" id="article-section-description-recipe">
                         <div class="article-section-description-recipe-left">
                             <img src="image/recipe_hdg-m3_pc.png" alt="三月份">
-                            <span>Lorem, ipsum dolor sit amet
-                                consectetur adipisicing elit.</span></div>
+                            <span class="article-section-description-recipe-left-span">Lorem, ipsum dolor sit amet
+                                consectetur adipisicing elit.</span>
+                            <span class="article-section-seemore" id="article-section-seemore-recipe">更多食譜...</span>
+                        </div>
                         <div class="article-section-description-recipe-right">
                             <div class="article-recipe-right-title">
                                 <h3 id="recipe-right-title-h3-1">本周推薦</h3>
@@ -464,11 +464,11 @@
                                         blanditiis!</p>
 
                             </div>
-                            <div class="article-recipe-right-photo-div"><img id="" article-recipe-right-photo-2"
+                            <div class="article-recipe-right-photo-div"><img id="article-recipe-right-photo-2"
                                     src="image/salmon-1485014_960_720.jpg" alt=""></div></a>
                         </div>
                     </div>
-                    <span class="article-section-seemore" id="article-section-seemore-recipe">更多食譜...</span>
+
                 </div>
             </section><!-- end of recipe-->
 
@@ -483,7 +483,7 @@
                                     <!-- <video id="livestream-left-1-video"
                                         src="video/【快速料理】15分鐘義大利麵上桌 味噌蝴蝶麵 Miso Farfalle│HowLiving美味生活.mp4" autoplay
                                         muted controls></video> -->
-                                    <iframe width="540" height="304" src="https://www.youtube.com/embed/nLNVu3ddAoc"
+                                    <iframe id="livestream-hot-video" src="https://www.youtube.com/embed/nLNVu3ddAoc"
                                         frameborder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
@@ -493,9 +493,10 @@
                                         <h3 id="livestream-left-1-video-h3">熱門影片</h3>
                                     </a>
                                     <p id="livestream-left-1-video-p">Lorem ipsum dolor sit amet consectetur adipisicing
-                                        elit. Error excepturi veniam numquam assumenda porro quas fugit laborum fuga
-                                        ducimus, autem, consequuntur facere deserunt nobis. Delectus explicabo hic
-                                        repudiandae consectetur nostrum?</p>
+                                        elit. Error excepturi veniam numquam assumenda porro quas fugit dolor sit amet
+                                        consectetur adipisicing
+                                        elit. Error excepturi venda porro laborum fuga
+                                        ?</p>
                                 </div>
                             </div>
                             <div class="article-section-description-livestream-right" id="livestream-right-1">
