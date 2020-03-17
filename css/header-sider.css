@@ -141,14 +141,31 @@
             }
 
             .slide_viewer {
-                height: 180px;
+                height: 576px;
             }
     
             .slide {
                 height: 100%;
             }
-            
-    
 
+            .slide:nth-of-type(1) {
+                background-image: url("../image/rwd/foodporn.jpg");
+            }
+            
+            .slide:nth-of-type(2) {
+                background-image: url("../image/rwd/iNameTheSite.jpg");
+            }
+            
+            .slide:nth-of-type(3) {
+                background-image: url("../image/rwd/simpelIsBest.jpg");
+            }
+            
+            .slide:nth-of-type(4) {
+                background-image: url("../image/rwd/fresh.jpg");
+            }
+            
+            .slide:nth-of-type(5) {
+                background-image: url("../image/rwd/enjoyYourLS.jpg");
+            } 
         }
 
