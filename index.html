@@ -7,6 +7,7 @@
     <title>Foodporn</title>
     <link rel="stylesheet" href="css/frontEnd.css">
     <link rel="stylesheet" href="css/header-sider.css">
+    <link rel="stylesheet" href="css/FMALL.css">
     <link rel="icon" href="image/head-FoodPron_Logo.ico" type="image/x-icon">
     <link rel="shortcut icon" href="image/head-FoodPron_Logo.ico" type="image/x-icon" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -33,7 +34,7 @@
             /* border: 5px solid black; */
             max-width: 1024px;
             margin: 10px auto;
-            height: 600px;
+            /* height: 600px; */
 
         }
 
@@ -673,20 +674,84 @@
                         <div class="shop-slide_buttons">
                         </div>
                     </div><!-- End // .shop-slider-contain -->
+                    <!--商品成列-->
+                    <div id="mallproduct">
+                        <ul class="imglist">
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/調味料.png" alt="">
+                                    <span class="imglist-li-span">調味料</span>
+                                </a>
+                            </li>
+
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/果醬.png" alt="">
+                                    <span class="imglist-li-span">果醬</span>
+                                </a>
+                            </li>
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/麵粉.jfif" alt="">
+                                    <span class="imglist-li-span">麵粉</span>
+                                </a>
+                            </li>
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/酒類.jfif" alt="">
+                                    <span class="imglist-li-span">酒類</span>
+                                </a>
+                            </li>
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/蔬菜.jpg" alt="">
+                                    <span class="imglist-li-span">蔬菜</span>
+                                </a>
+                            </li>
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/水果.jpg" alt="">
+                                    <span class="imglist-li-span">水果</span>
+                                </a>
+                            </li>
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/魚類.jpg" alt="">
+                                    <span class="imglist-li-span">海鮮</span>
+                                </a>
+                            </li>
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/肉類.jpg" alt="">
+
+                                    <span class="imglist-li-span">肉類</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!--商品陳列-->
+                    </div><!-- end of Mallproduct -->
+                    <span class="article-section-seemore">更多食材...</span>
+
                 </div>
                 <!--end of article-container  -->
                 <div class="article-section-description" id="article-section-description-shop">
-
                 </div><!-- end of article-section-description-->
-                <span class="article-section-seemore">更多食材...</span>
                 </div>
             </section><!-- end of shop-->
+            <hr>
+            <section class="middle-ad">
+                <div class="middle-ad-contain">
+                    <img src="image/ad/禮券.jpg" alt="禮券">
+                </div>
 
+            </section>
+            <hr>
             <section id="course">
                 <!--課程專區-->
                 <div class="article-container">
                     <h2>課程專區</h2><span class="ariticle-section-cption">Cooking Course</span>
-                    <div class="article-section-description"></div>
+                    <div class="article-section-description" style="height: 700px;"></div>
                     <span class="article-section-seemore">更多料理課程...</span>
                 </div>
             </section><!-- end of course-->
@@ -730,6 +795,23 @@
             $(".shop-slide-article-and-photo-img").removeClass('imgScale');
             $(".shop-slide-article-and-photo-img").addClass('imgSmall');
         });
+        $(".imglist-li").hover(function () {
+            $(".imglist-li-span").removeClass('.textRecoverColor');
+            $(".imglist-li-span").addClass('.textChangeColor');
+        });
+        $(".imglist-li").mouseleave(function () {
+            $(".imglist-li-span", this).removeClass('.textChangeColor');
+            $(".imglist-li-span", this).addClass('.textRecoverColor');
+        });
+        $(".imglist-li").hover(function () {
+            $(".imglist-li-img", this).removeClass('imgSmall');
+            $(".imglist-li-img", this).addClass('imgScale');
+        });
+        $(".imglist-li").mouseleave(function () {
+            $(".imglist-li-img", this).removeClass('imgScale');
+            $(".imglist-li-img", this).addClass('imgSmall');
+        });
+
     </script>
 </body>
 

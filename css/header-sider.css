@@ -203,15 +203,6 @@ a.shop-slide_btn {
     color: #E4002B;
 }
 
-.imgScale{
-    transition: all ease-in-out 300ms;
-    transform: scale(1.1, 1.1);
-}
-
-.imgSmall{
-    transition: all ease-in-out 300ms;
-    transform: scale(1, 1);
-}
 
 .shop-slide-article-and-photo-recommend,.shop-slide-article-and-photo-p{
     width: 100%;
