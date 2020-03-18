@@ -256,15 +256,14 @@ nav {
 
  .article-section-seemore {
     text-align: center;
-    display: inline-block;
+    display:block;
     width: 370px;
-    
     height: 45px;
     letter-spacing: 3px;
     flex: 1;
     padding-top: 8px;
     padding-left: 10px;
-    margin: 25px;
+    margin: 25px auto;
     border-radius: 999px;
     border: 1px solid #E4002B;
     font-family: '微軟正黑體', monospace;
@@ -279,6 +278,7 @@ nav {
     background-position: 0 -35%;
     transition: 1.2s ease;
     background-color: white;
+    clear: both;
 }
 
 .article-section-seemore:hover {
