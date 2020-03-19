@@ -441,7 +441,7 @@ nav {
             display: none;
             color: rgba(105, 55, 55, 0.699);
             position: relative;
-            z-index: 99;
+            z-index: 9;
             font: 600 16px/18px "微軟正黑體"'Open Sans', sans-serif;
             width: 95%;
             margin:0 auto;
