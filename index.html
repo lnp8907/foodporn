@@ -81,7 +81,6 @@
             color: white;
             font-size: 28px;
             display: block;
-
             padding-top: 10px;
         }
 
@@ -155,10 +154,12 @@
 
         }
 
+
+
         @media screen and (max-width: 575px) {
 
             #article-recipe {
-                height: 840px;
+                height: 880px;
             }
 
             .article-section-description-recipe-left {
@@ -166,20 +167,39 @@
                 width: 350px;
                 padding-top: 0;
                 padding-left: 10px;
-                margin-left: 10px;
+                margin: 0 auto;
                 height: 300px;
+                float: none;
             }
 
             .article-section-description-recipe-right {
                 box-sizing: border-box;
                 width: 350px;
-                float: left;
-                margin-left: 10px;
+                height: 190px;
+                float: none;
+                margin: 40px auto;
             }
 
             #article-section-seemore-recipe {
-                margin-top: 50px
+                margin: 70px auto;
             }
+
+            .article-recipe-right-photo-div {
+                width: 50%;
+                overflow: hidden;
+                margin-left: 5px;
+            }
+
+            .article-recipe-right-title {
+                float: left;
+            }
+
+            .article-recipe-right-title h3,
+            p {
+                text-align: left;
+                width: 90%;
+            }
+
         }
 
         /*---------------------------直播專區------------------------------------*/
@@ -279,20 +299,26 @@
 
         @media screen and (max-width: 575px) {
             #article-container-livestream {
-                height: 1600px;
+                height: 1850px;
                 padding-left: 5%;
             }
 
             .article-section-description-livestream-left {
-                width: 350px;
+                width: 100%;
                 padding: 0;
-                float: left;
+                float: none;
                 height: 500px;
+                margin: 0 auto;
             }
 
             .article-section-description-livestream-right {
                 width: 350px;
-                float: left;
+                height: 320px;
+                float: none;
+            }
+
+            .livestream-right-photo-div {
+                height: 200px;
             }
 
         }
@@ -340,7 +366,26 @@
 
 
         /*變換大小*/
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 575px) {
+            ul.imglist li {
+                margin: 10px;
+                width: 160px;
+            }
+
+            #mallproduct {
+                height: 910px;
+
+            }
+
+            ul.imglist li img {
+                width: 100%;
+                height: 140px;
+            }
+
+        }
+
+
+        @media (min-width: 575px) and (max-width: 767px) {
             .shop-slide_viewer {
                 height: 450px;
                 padding-left: 10px;
@@ -348,7 +393,7 @@
 
             #mallproduct {
                 width: 500px;
-                height: 950px;
+                height: 910px;
 
             }
 
@@ -412,7 +457,7 @@
 
 <body>
     <header>
-        <div id="top-logo" class="logo"><a href="frontEnd.html" title="回首頁"><img class="logo-photo"
+        <div id="top-logo" class="logo"><a href="index.html" title="回首頁"><img class="logo-photo"
                     src="image/FoodPron_Logo.png" alt="logo"></a></div>
         <div class="function">
             <div class="function-list">
@@ -442,8 +487,7 @@
         <nav id="navigation">
             <ul>
                 <li class="dropdown">
-                    <a href=""><img class="access-menu-icon" src="image/recipe-icon.png"><span
-                            class="menu-span">食譜專區</span></a>
+                    <a><img class="access-menu-icon" src="image/recipe-icon.png"><span class="menu-span">食譜專區</span></a>
                     <ul>
                         <li><a href="#">About Version</a></li>
                         <li><a href="#">About Version</a></li>
@@ -452,7 +496,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href=""><img class="access-menu-icon" src="image/livestream-icon.png"><span
+                    <a><img class="access-menu-icon" src="image/livestream-icon.png"><span
                             class="menu-span">直播專區</span></a>
                     <ul>
                         <li><a href="#">About Version</a></li>
@@ -462,8 +506,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href=""><img class="access-menu-icon" src="image/shop-icon.png"><span
-                            class="menu-span">食材商城</span></a>
+                    <a><img class="access-menu-icon" src="image/shop-icon.png"><span class="menu-span">食材商城</span></a>
                     <ul>
                         <li><a href="#">About Version</a></li>
                         <li><a href="#">About Version</a></li>
@@ -472,8 +515,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href=""><img class="access-menu-icon" src="image/course-icon.png"><span
-                            class="menu-span">料理課程</span></a>
+                    <a><img class="access-menu-icon" src="image/course-icon.png"><span class="menu-span">料理課程</span></a>
                 </li>
             </ul>
         </nav>
@@ -509,7 +551,7 @@
                 </div>
                 <div class="sign-up-htm">
                     <div class="group">
-                        <label for="user" class="label">靖祐</label>
+                        <label for="user" class="label">User</label>
                         <input id="user" type="text" class="input">
                     </div>
                     <div class="group">
@@ -910,8 +952,15 @@
             } else {
                 $('#BackTop').stop().fadeOut(222);
             }
-        })
-        //Menu 鍵捲動時隱藏
+        });
+
+        //畫面捲動時隱藏
+        window.onresize = function () {
+            if ($(window).width() > 767) {
+                $("nav").show();
+            } else $("nav").hide();
+        }
+
     </script>
 
     <!-- JavasScript for shop-slide -->
@@ -943,9 +992,6 @@
         $("#menu-icon").on("click", function () {
             $("nav").slideToggle();
             $(this).toggleClass("active");
-            $(function () {
-                $('body,html').toggleClass('add');//彈出視窗時給body新增CSS 禁止滾動
-            });
         });
     </script>
 </body>
