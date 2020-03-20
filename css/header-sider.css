@@ -233,4 +233,24 @@ a.shop-slide_btn {
     vertical-align: top;
 }
 
+@media only screen and (max-width: 575px) {
+    .shop-slide-article {
+        padding-left: 15px;
+    }
+    .shop-slide-article-and-photo-img{
+        width: 100%;
+        margin-top: 100px;
+    }
+    .shop-slide-article-and-photo{
+        margin-top: 0;
+        height: 400px;
+        padding-top: 10px;
+    }
+    .shop-slide-article-and-photo-p{
+        margin-top: 5px;
+    }
+    .shop-slide-article-and-photo-title{
+        margin-bottom: 10px;
+    }
+}
 
