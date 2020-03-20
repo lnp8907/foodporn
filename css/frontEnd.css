@@ -141,17 +141,6 @@ a:hover{
         font-size: 14px;
         transition: all 300ms;
     }
-    
-    .dropdown-first-a {
-        font-size: 20px;
-        color: #FF5757;
-    }
-
-    .dropdown-first-a:hover{
-        font-size: 22px;
-        color: #FF5757;
-    }
-
 
     nav li li a:hover {
         background: #bdc3c7;
@@ -175,13 +164,35 @@ a:hover{
         float: left;
     }
 
+    .dropdown-first-a {
+        font-size: 20px;
+        color: #333;
+        display: block;
+    }
+
+    .dropdown-first-a:hover{
+        font-size: 22px;
+        /* color: #FF5757; */
+    }
+
+    .dropdown-first-img{
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    }
+
+    .dropdown-first-a-span{
+        display: inline-block;
+        line-height: 100%;
+        vertical-align: middle;
+    }
 @media only screen and (max-width: 768px) {
     #navigation {
         display: none;
         width: 100%;
         clear: both;
         float: none;
-        height: 600px;
+        height: 650px;
         overflow-x: scroll;
         padding: 20px;
         margin-top: 20px;
@@ -275,6 +286,18 @@ a:hover{
     #dropdown-shop-ul li{
         float: none;
         width: 100%;
+    }
+
+    .dropdown-first-a {
+        color: #FF5757;
+    }
+
+    .dropdown-first-a:hover{
+        color: #FF5757;
+        font-size: 24px;
+    }
+    .dropdown-first-img{
+        display: none;
     }
 }
 
@@ -435,7 +458,7 @@ nav {
 .pagetop {
     /*置頂按鈕*/
     position: fixed;
-    bottom: 30px;
+    bottom: 40px;
     right: 30px;
     display: inline-block;
     width: 60px;
@@ -448,6 +471,7 @@ nav {
 @media screen and (max-width: 575px) {
     .pagetop {
         left: 85%;
+        bottom: 45px;
     }
 }
 @media (min-width: 576px) and (max-width: 768px) {}
@@ -468,7 +492,63 @@ nav {
     margin-top: 80px;
     height: 150px;
     background-color: rgb(206, 206, 200);
+    padding-right: 100px;
+    padding-top: 3px;
 }
+
+.footer-murmur ul{
+    list-style: none;
+    float: right;
+    width: 100px;
+    margin: 15px auto;
+    margin-right: 50px;
+    font-size: 14px;
+    color: rgba(51, 51, 51, 0.733);
+}
+.footer-li-fist{
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+
+.footer-murmur ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer-murmur ul .footer-li-fist:hover{
+    cursor: default;
+    text-decoration: none;
+}
+
+.footer-murmur img{
+    max-width: 150px;
+    display: inline-block;
+    margin-left: 12%;
+}
+@media (min-width:768px) and (max-width: 998px){
+    .footer-bg{
+        padding-right: 0px;
+    }
+    .footer-murmur ul{
+        margin-right: 10px; 
+    }
+}
+
+@media screen and (max-width: 767px){
+    .footer-murmur ul,.footer-murmur ul li{
+        display: none;
+    }
+    .footer-murmur img{
+        display: block;
+        margin: 5px auto;
+    }
+    .footer-bg{
+        padding-right: 0px;
+    }
+
+}
+
 
 
 /*-------------------------------登箱------------------------------*/
@@ -670,6 +750,8 @@ nav {
             top: -40px;
             font-weight: 600;
         }
+
+
 
 /*====================== 自定義CSS效果 for jQuery  =================*/
 /*圖形縮放*/
