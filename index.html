@@ -361,6 +361,7 @@
             margin: 0 auto;
             width: 200px;
             height: 30px;
+            padding: 0 auto;
             line-height: 40px;
         }
 
@@ -388,7 +389,7 @@
         @media (min-width: 575px) and (max-width: 767px) {
             .shop-slide_viewer {
                 height: 450px;
-                padding-left: 10px;
+                padding-left: 2px;
             }
 
             #mallproduct {
@@ -452,6 +453,15 @@
         }
 
         /*---------------------------課程專區------------------------------------*/
+        #dropdown-shop-ul {
+            width: 800px;
+            left: -400px;
+        }
+
+        #dropdown-shop-ul li {
+            width: 30%;
+            float: left;
+        }
     </style>
 </head>
 
@@ -489,33 +499,47 @@
                 <li class="dropdown">
                     <a><img class="access-menu-icon" src="image/recipe-icon.png"><span class="menu-span">食譜專區</span></a>
                     <ul>
-                        <li><a href="#">About Version</a></li>
-                        <li><a href="#">About Version</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a class="dropdown-first-a" href="#">食譜主頁</a></li>
+                        <li><a href="#">特輯食譜</a></li>
+                        <li><a href="#">推薦食譜</a></li>
+                        <li><a href="#">建立食譜</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a><img class="access-menu-icon" src="image/livestream-icon.png"><span
                             class="menu-span">直播專區</span></a>
                     <ul>
-                        <li><a href="#">About Version</a></li>
-                        <li><a href="#">About Version</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a class="dropdown-first-a" href="#">直播主頁</a></li>
+                        <li><a href="#">直播預告</a></li>
+                        <li><a href="#">熱門直播</a></li>
+                        <li><a href="#">建立直播預告</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-shop">
+                    <a><img class="access-menu-icon" src="image/shop-icon.png"><span class="menu-span">食材商城</span></a>
+                    <ul id="dropdown-shop-ul">
+                        <li><a class="dropdown-first-a" href="#">食材商城主頁</a></li>
+                        <li><a href="#">調味料</a></li>
+                        <li><a href="#">果醬</a></li>
+                        <li><a href="#">麵粉</a></li>
+                        <li><a href="#">酒類</a></li>
+                        <li><a href="#">蔬菜</a></li>
+                        <li><a href="#">水果</a></li>
+                        <li><a href="#">海鮮</a></li>
+                        <li><a href="#">肉類</a></li>
+                        <li><a href="#">乳製品</a></li>
+                        <li><a href="#">香料</a></li>
+                        <li><a href="#">罐頭</a></li>
+                        <li><a href="#">乾貨</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a><img class="access-menu-icon" src="image/shop-icon.png"><span class="menu-span">食材商城</span></a>
-                    <ul>
-                        <li><a href="#">About Version</a></li>
-                        <li><a href="#">About Version</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </li>
-                <li>
                     <a><img class="access-menu-icon" src="image/course-icon.png"><span class="menu-span">料理課程</span></a>
+                    <ul>
+                        <li><a class="dropdown-first-a" href="#">課程主頁</a></li>
+                        <li><a href="#">熱門課程</a></li>
+                        <li><a href="#">建立料理課程</a></li>
+                    </ul>
                 </li>
             </ul>
         </nav>
@@ -892,9 +916,37 @@
                             </li>
                             <li class="imglist-li">
                                 <a href=>
-                                    <img class="imglist-li-img" src="image/shop/肉類.jpg" alt="">
+                                    <img class="imglist-li-img" src="image/shop/肉類.png" alt="">
 
                                     <span class="imglist-li-span">肉類</span>
+                                </a>
+                            </li>
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/乳製品.png" alt="">
+
+                                    <span class="imglist-li-span">乳製品</span>
+                                </a>
+                            </li>
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/香料.png" alt="">
+
+                                    <span class="imglist-li-span">香料</span>
+                                </a>
+                            </li>
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/罐頭.png" alt="">
+
+                                    <span class="imglist-li-span">罐頭</span>
+                                </a>
+                            </li>
+                            <li class="imglist-li">
+                                <a href=>
+                                    <img class="imglist-li-img" src="image/shop/乾貨.png" alt="">
+
+                                    <span class="imglist-li-span">乾貨</span>
                                 </a>
                             </li>
                         </ul>
