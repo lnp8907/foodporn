@@ -165,6 +165,16 @@ a:hover{
         transition: all 250ms;
     }
 
+    #dropdown-shop-ul {
+        width: 800px;
+        left: -400px;
+    }
+
+    #dropdown-shop-ul li {
+        width: 30%;
+        float: left;
+    }
+
 @media only screen and (max-width: 768px) {
     #navigation {
         display: none;
@@ -213,6 +223,10 @@ a:hover{
 
     #menu-icon.active .third {
         display: none
+    }
+
+    #dropdown-shop-ul li{
+        float: none;
     }
 
     nav ul {
