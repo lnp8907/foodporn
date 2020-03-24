@@ -7,9 +7,12 @@
     <title>Foodporn</title>
     <link rel="stylesheet" href="css/frontEnd.css">
     <link rel="stylesheet" href="css/header-sider.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="image/head-FoodPron_Logo.ico" type="image/x-icon">
     <link rel="shortcut icon" href="image/head-FoodPron_Logo.ico" type="image/x-icon" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <style>
         /*---------------------------------article-container-------------------------------------------*/
         a {
@@ -467,14 +470,6 @@
             display: block;
         }
 
-        .middle-ad-contain img {
-            transition: all ease-in-out 250ms;
-        }
-
-        .middle-ad-contain img:hover {
-            transform: scale(1.1, 1.1);
-            cursor: pointer;
-        }
 
         /*---------------------------課程專區------------------------------------*/
 
@@ -721,7 +716,7 @@
                     </div>
             </section><!-- end of ad -->
 
-            <section id="recipe">
+            <section id="recipe" data-aos="fade-up">
                 <!--食譜專區-->
                 <div class="article-container" id="article-recipe">
                     <h2 class="ariticle-section-racipe-h2">食譜專區</h2><span class="ariticle-section-cption">Recipe</span>
@@ -732,7 +727,7 @@
                                 consectetur adipisicing elit.</span>
                             <span class="article-section-seemore" id="article-section-seemore-recipe">更多食譜...</span>
                         </div>
-                        <div class="article-section-description-recipe-right">
+                        <div class="article-section-description-recipe-right" data-aos="fade-up">
                             <div class="article-recipe-right-title">
                                 <h3 id="recipe-right-title-h3-1">本周推薦</h3>
                                 <a href="" id="recipe-right-title-a-1">
@@ -742,7 +737,7 @@
                             <div class="article-recipe-right-photo-div"><img id="article-recipe-right-photo-1"
                                     src="image/bibimbap-4887417_960_720.jpg" alt=""></div></a>
                         </div>
-                        <div class="article-section-description-recipe-right">
+                        <div class="article-section-description-recipe-right" data-aos="fade-up">
                             <div class="article-recipe-right-title">
                                 <h3 id="recipe-right-title-h3-2">熱門食譜</h3>
                                 <a href="" id="recipe-right-title-a-1">
@@ -760,7 +755,8 @@
 
             <section>
                 <!--直播專區-->
-                <div class="article-container" id="livestream">
+                <div class="article-container" id="livestream" data-aos="fade-up" data-aos-anchor-placement="top-center"
+                    data-aos-duration="2000">
                     <h2 class="article-section-tiltle">直播專區</h2><span class="ariticle-section-cption">Livestream</span>
                     <div id="article-container-livestream">
                         <div class="article-section-description-livestream">
@@ -786,7 +782,8 @@
                                 </div>
                             </div>
                             <div class="article-section-description-livestream-rightgroup">
-                                <div class="article-section-description-livestream-right" id="livestream-right-1">
+                                <div class="article-section-description-livestream-right" data-aos="fade-up"
+                                    id="livestream-right-1">
                                     <div class="livestream-right-photo-div"><a href="" id="livestream-right-link-1"><img
                                                 id="livestream-right-photo-1" src="image/chef/chef1.jpg" alt=""
                                                 class="livestream-right-img"></div>
@@ -796,7 +793,8 @@
                                         <p id="livestream-right-livestream-name-1">Lorem ipsum dolor si blanditiis!</p>
                                     </div>
                                 </div>
-                                <div class="article-section-description-livestream-right" id="livestream-right-2">
+                                <div class="article-section-description-livestream-right" data-aos="fade-up"
+                                    id="livestream-right-2">
                                     <div class="livestream-right-photo-div"><a href="" id="livestream-right-link-2"><img
                                                 id="livestream-right-photo-2" src="image/chef/chef2.jpg" alt=""></div>
                                     <div class="livestream-right-title">
@@ -806,7 +804,8 @@
                                     </div>
                                 </div>
 
-                                <div class="article-section-description-livestream-right" id="livestream-right-3">
+                                <div class="article-section-description-livestream-right" data-aos="fade-up"
+                                    id="livestream-right-3">
                                     <div class="livestream-right-photo-div"><a href="" id="livestream-right-link-3"><img
                                                 id="livestream-right-photo-3" src="image/chef/chef3.jpg" alt=""></div>
                                     <div class="livestream-right-title">
@@ -816,7 +815,8 @@
                                     </div>
                                 </div>
 
-                                <div class="article-section-description-livestream-right" id="livestream-right-4">
+                                <div class="article-section-description-livestream-right" data-aos="fade-up"
+                                    id="livestream-right-4">
                                     <div class="livestream-right-photo-div"><a href="" id="livestream-right-link-4"><img
                                                 id="livestream-right-photo-4" src="image/chef/chef4.jpg" alt=""></div>
                                     <div class="livestream-right-title">
@@ -828,14 +828,14 @@
                             </div>
                         </div>
                     </div><!-- end of livestream-->
-                    <span class="article-section-seemore">更多線上直播...</span>
+                    <span class="article-section-seemore" data-aos="fade-up">更多線上直播...</span>
                 </div>
             </section><!-- end of livestream-->
 
             <section id="shop">
                 <!--食材商城-->
                 <div class="article-container">
-                    <div class="shop-slider-contain">
+                    <div class="shop-slider-contain" data-aos="fade-up" data-aos-duration="2000">
                         <h2>食材商城</h2><span class="ariticle-section-cption">Ingredient store</span>
                         <div class="shop-slider">
                             <div class="shop-slide_viewer">
@@ -963,78 +963,78 @@
                     <!--商品成列-->
                     <div id="mallproduct">
                         <ul class="imglist">
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/調味料.png" alt="">
                                     <span class="imglist-li-span">調味料</span>
                                 </a>
                             </li>
 
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/果醬.png" alt="">
                                     <span class="imglist-li-span">果醬</span>
                                 </a>
                             </li>
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/麵粉.jfif" alt="">
                                     <span class="imglist-li-span">麵粉</span>
                                 </a>
                             </li>
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/酒類.jfif" alt="">
                                     <span class="imglist-li-span">酒類</span>
                                 </a>
                             </li>
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/蔬菜.jpg" alt="">
                                     <span class="imglist-li-span">蔬菜</span>
                                 </a>
                             </li>
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/水果.jpg" alt="">
                                     <span class="imglist-li-span">水果</span>
                                 </a>
                             </li>
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/魚類.jpg" alt="">
                                     <span class="imglist-li-span">海鮮</span>
                                 </a>
                             </li>
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/肉類.png" alt="">
 
                                     <span class="imglist-li-span">肉類</span>
                                 </a>
                             </li>
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/乳製品.png" alt="">
 
                                     <span class="imglist-li-span">乳製品</span>
                                 </a>
                             </li>
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/香料.png" alt="">
 
                                     <span class="imglist-li-span">香料</span>
                                 </a>
                             </li>
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/罐頭.png" alt="">
 
                                     <span class="imglist-li-span">罐頭</span>
                                 </a>
                             </li>
-                            <li class="imglist-li">
+                            <li class="imglist-li" data-aos="zoom-in">
                                 <a href=>
                                     <img class="imglist-li-img" src="image/shop/乾貨.png" alt="">
 
@@ -1045,7 +1045,7 @@
 
                         <!--商品陳列-->
                     </div><!-- end of Mallproduct -->
-                    <span class="article-section-seemore">更多食材...</span>
+                    <span class="article-section-seemore" data-aos="zoom-in">更多食材...</span>
 
                 </div>
                 <!--end of article-container  -->
@@ -1054,7 +1054,7 @@
                 </div>
             </section><!-- end of shop-->
             <hr>
-            <section class="middle-ad">
+            <section class="middle-ad" data-aos="fade-up">
                 <div class="middle-ad-contain">
                     <img src="image/ad/禮券.jpg" alt="禮券">
                 </div>
@@ -1063,12 +1063,13 @@
             <section id="course">
                 <!--課程專區-->
                 <div class="article-container">
-                    <h2>課程專區</h2><span class="ariticle-section-cption">Cooking Course</span>
+                    <h2 data-aos="fade-up">課程專區</h2><span class="ariticle-section-cption" data-aos="fade-up">Cooking
+                        Course</span>
                     <div class="article-section-description">
                         <!--課程成列-->
                         <div id="course-list-div">
                             <ul class="course-list-ul">
-                                <li class="course-list-li">
+                                <li class="course-list-li" data-aos="fade-up" data-aos-duration="2000">
                                     <a href=>
                                         <div class="course-li-img-div">
                                             <img class="course-li-img" id="course-li-title-1"
@@ -1078,7 +1079,7 @@
                                             id="course-date-li-1">2020-05-12-19:00</span>
                                     </a>
                                 </li>
-                                <li class="course-list-li">
+                                <li class="course-list-li" data-aos="fade-up" data-aos-duration="2000">
                                     <a href=>
                                         <div class="course-li-img-div">
                                             <img class="course-li-img" id="course-li-title-2"
@@ -1088,7 +1089,7 @@
                                             id="course-date-li-2">2020-04-18-14:00</span>
                                     </a>
                                 </li>
-                                <li class="course-list-li">
+                                <li class="course-list-li" data-aos="fade-up" data-aos-duration="2000">
                                     <a href=>
                                         <div class="course-li-img-div">
                                             <img class="course-li-img" id="course-li-title-3"
@@ -1098,7 +1099,7 @@
                                             id="course-date-li-3">2020-04-22-18:00</span>
                                     </a>
                                 </li>
-                                <li class="course-list-li">
+                                <li class="course-list-li" data-aos="fade-up" data-aos-duration="2000">
                                     <a href=>
                                         <div class="course-li-img-div">
                                             <img class="course-li-img" id="course-li-title-4"
@@ -1112,7 +1113,7 @@
                             <!--end of 課程規劃-->
                         </div><!-- end of Mallproduct -->
                     </div>
-                    <span class="article-section-seemore">更多料理課程...</span>
+                    <span class="article-section-seemore" data-aos="fade-up" data-aos-duration="1000">更多料理課程...</span>
                 </div>
             </section><!-- end of course-->
 
@@ -1120,7 +1121,7 @@
     </main><!-- end of main -->
     <footer>
         <div class="footer-bg">
-            <div class="footer-murmur">
+            <div class="footer-murmur" data-aos="fade-up">
                 <img src="image/FoodPron_Logo_white.png" alt="logo">
                 <ul>
                     <li class="footer-li-fist">逛其他</li>
@@ -1214,6 +1215,9 @@
             $("nav").slideToggle();
             $(this).toggleClass("active");
         });
+    </script>
+    <script>
+        AOS.init();
     </script>
 </body>
 
