@@ -60,7 +60,7 @@
     line-height: 1;
     opacity: .75;
     color: #ffffff00;
-    background-image: url("/image/prev_icon.png");
+    background-image: url("../image/prev_icon.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -80,7 +80,7 @@
     color: #f8f8f800;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: url("/image/next_icon.png");
+    background-image: url("../image/next_icon.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
