@@ -36,6 +36,113 @@ a:hover{
     cursor: pointer;
 }
 
+/* =========================== MENU-ICON 選單按鈕====================*/
+
+.menu-icon {
+    display: none;
+    transition: all 250ms;
+}
+
+
+
+@media screen and (max-width: 768px) {
+.menu {
+        margin: auto;
+        position: absolute;
+        top: 85px;
+        right: 5px;
+        width: 65px;
+        height: 65px;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 26px;
+}
+ .menu-open-button {
+    background: rgb(255, 255, 255);
+    border-radius: 100%;
+    width: 65px;
+    height: 65px;
+    margin-left: -40px;
+    position: absolute;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 65px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform ease-out 200ms;
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+ }
+ 
+ .menu-open {
+    display: none;
+ }
+ 
+ .lines {
+    width: 25px;
+    height: 3px;
+    background: #E4002B;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -12.5px;
+    margin-top: -1.5px;
+    -webkit-transition: -webkit-transform 200ms;
+    transition: -webkit-transform 200ms;
+    transition: transform 200ms;
+    transition: transform 200ms, -webkit-transform 200ms;
+ }
+ 
+ .line-1 {
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0);
+ }
+ 
+ .line-2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+ }
+ 
+ .line-3 {
+    -webkit-transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, 8px, 0);
+ }
+ 
+ .menu-open:checked + .menu-open-button .line-1 {
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+    transform: translate3d(0, 0, 0) rotate(45deg);
+ }
+ 
+ .menu-open:checked + .menu-open-button .line-2 {
+    -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+    transform: translate3d(0, 0, 0) scale(0.1, 1);
+ }
+ 
+ .menu-open:checked + .menu-open-button .line-3 {
+    -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+ }
+ 
+ .menu-open-button {
+    z-index: 2;
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+ }
+ 
+ .menu-open-button:hover {
+    -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+    transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+ }
+
+}
 /* ============================導覽列================================*/
     #navigation {
         max-width: 100%;
@@ -71,7 +178,7 @@ a:hover{
 
     nav li a {
         box-sizing: border-box;
-        width: 100%;
+        width: 90%;
         float: left;
         font-family: "微軟正黑體";
         font-size: 18px;
@@ -80,7 +187,7 @@ a:hover{
         line-height: 50px;
         padding-top: 20px;
         padding-bottom: 0;
-        transition: all 300ms;
+        transition: all 200ms;
     }
 
     nav li a:hover {
@@ -149,10 +256,7 @@ a:hover{
         font-size: 16px;
     }
 
-    #menu-icon {
-        display: none;
-        transition: all 250ms;
-    }
+
 
     #dropdown-shop-ul {
         width: 800px;
@@ -205,19 +309,9 @@ a:hover{
         /* position: fixed; */
     }
 
-    #menu-icon {
-        width: 70px;
-        display: inline-block;
-        position: absolute;
-        top: 85px;
-        right: 30px;
-        cursor: pointer;
-        transition: all 250ms;
-    }
 
-    #menu-icon img {
-        max-width: 100%;
-    }
+
+
 
     #menu-icon.active .first {
         transform: rotate(45deg);
@@ -357,18 +451,20 @@ a:hover{
     height: 50px;
     padding: 5px;
 }
+.notice {
+    width: 120px;
+    float: right;
+    margin-bottom: 0;
+    height: 50px;
+    padding: 5px;
+}
 
-.shop-car img,.login img{
+.shop-car img,.login img,.notice img {
  display: inline-block;
  vertical-align: bottom;
 }
 
-.shop-car:hover {
-    border-bottom: 3px solid #E4002B;
-    box-sizing: border-box;
-}
-
-.login:hover {
+.shop-car:hover,.notice:hover, .login:hover {
     border-bottom: 3px solid #E4002B;
     box-sizing: border-box;
 }
@@ -403,6 +499,28 @@ nav {
     width: 85%;
     padding-left: 10px;
 }
+@media screen and (max-width: 575px){
+    .notice-span, .shop-car-span, .login-span{
+        display: none;
+    }
+    .shop-car,.login {
+        width: 42px;
+    }
+    .shop-car,.login, .notice{
+        width: 42px;
+        padding: 0;
+        margin-left: 5px;
+        overflow: hidden;
+    }
+    .shop-car:hover,.login:hover, .notice:hover{
+        border: none;
+    }
+    .shop-car img:hover,.login img:hover, .notice img:hover{
+        transform: scale(1.2,1.2);
+    }
+
+}
+
 
 /* ============================ END OF HEADER 頂頭功能區================================*/
 
@@ -413,7 +531,7 @@ nav {
     }
   }
 
- .article-section-seemore {
+ .article-section-seemore,.article-section-seemore-course {
     text-align: center;
     display:block;
     width: 370px;
