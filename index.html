@@ -558,7 +558,7 @@
 
 <body>
     <header>
-        <div id="top-logo" class="logo"><a href="whoAmI.html" title="我是誰?"><img class="logo-photo"
+        <div id="top-logo" class="logo"><a href="whoAmI.htm" title="我是誰?"><img class="logo-photo"
                     src="image/FoodPron_Logo.png" alt="logo"></a></div>
         <div class="function">
             <div class="function-list">
@@ -687,19 +687,19 @@
                 </div>
                 <div class="sign-up-htm">
                     <div class="group">
-                        <label for="user" class="label">User</label>
-                        <input id="user" type="text" class="input">
+                        <label for="newuser" class="label">User</label>
+                        <input id="newuser" type="text" class="input">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Password</label>
-                        <input id="pass" type="password" class="input" data-type="password">
+                        <label for="newpass" class="label">Password</label>
+                        <input id="newpass" type="password" class="input" data-type="password">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Repeat Password</label>
-                        <input id="pass" type="password" class="input" data-type="password">
+                        <label for="renewpass" class="label">Repeat Password</label>
+                        <input id="renewpass" type="password" class="input" data-type="password">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Email Address</label>
+                        <label for="email" class="label">Email Address</label>
                         <input id="email" type="email" class="input">
                     </div>
                     <div class="group">
@@ -1291,7 +1291,9 @@
         $(".menu-open").on("click", function () {
             $("nav").slideToggle();
             $(this).toggleClass("active");
+            $('body,html').toggleClass('add')
         });
+
     </script>
     <script>
         AOS.init();
